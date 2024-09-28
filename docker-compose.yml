@@ -1,0 +1,9 @@
+version: '3'
+services:
+  app:
+    image: your-dockerhub-username/boss_monter:latest
+    restart: unless-stopped
+    env_file:
+      - boss_monter-env
+    ports:
+      - "7045:80"
